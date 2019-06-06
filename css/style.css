@@ -1,17 +1,6 @@
 body {
-    border: 1px solid grey;
-    background-color: white;
-    display: grid;
-    display: -moz-grid;
     margin: 0 auto;
     text-align: center;
-    /* grid-template-rows: 80px 80px 1fr 80px;
-    grid-template-columns: 1fr;
-    grid-template-areas:    
-        "header"
-        "sidebar"
-        "main"
-        "footer"; */
     
 }
 
@@ -21,6 +10,15 @@ header {
     background-color: white;
 }
 
+.nav {                         /*   **** */
+    display: inline-block;
+    color: black;
+}
+
+.menu {
+    display: inline-block;
+    color: white;
+}
 .jumbo, .jumboprod, .jumbotext, header {
     min-width: 500px;
     margin: 0;
@@ -33,50 +31,77 @@ header {
 
 .jumboprod {
     background-color: red;
-    height: 281px;
+    height: 45%;
 }
 
 .jumbotext {
     background-color: magenta;
-    height: 308px;
+    height: 55%;
 }
 
-/* .products {
-    margin: auto;
+.products {
+    margin: 48px; 
     text-align: center;
 
-} */
+}
+
+
 .miniprod {
     background-color: forestgreen;
     height: 377px;
-    max-width: 90%;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     z-index: 1;
     border: 1px solid black;
 }
 
 .miniimg {
-    min-width: 450px;
-    height: 251px;
+    height: 60%;
     background-color: lightblue;
     z-index: 10;
 }
 
+.prodtext {
+    height: 40%;
 
+}
+
+.socialmedia {
+    background-color: peachpuff;
+    height: 50px;
+    margin: 48px;
+    display: grid;
+}
+
+.footer {
+    background-color: olive;
+    height: 400px;
+    margin: 48px 0 0 0;
+    display: grid;
+}
+
+
+.footertext {
+    height: 324px;
+    background-color: palevioletred;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 5%;
+}
 
 @media screen and (min-width: 540px) {
    .products{
        display: grid;
         grid-template-columns: .5fr .5fr;
         grid-template-rows: .5fr .5fr;
-        grid-column-gap: 5% 5%;
+        grid-column-gap: 5%;
         grid-row-gap: 48px;
-        margin: 48px; 
         min-width: 256px;
     }
     
     .miniimg {
-        min-width: 232px;
+        /* min-width: 90%; */
     }
 
 }
@@ -90,5 +115,28 @@ header {
     .jumbo {
         height: 281px;
     }
+}
 
+@media screen and (min-width: 1080px) {
+    .products{
+        display: grid;
+         grid-template-columns: .25fr .25fr .25fr .25fr;
+         grid-template-rows: 1fr;
+         grid-column-gap: 5%;
+         grid-row-gap: 48px;
+    
+        }
+
+    .jumbo {
+        margin: 0 48px;
+    }
+
+    .footertext {
+        height: 324px;
+        background-color: palevioletred;
+        display: grid;
+        grid-template-columns: .16fr .16fr .16fr .16fr .16fr .16fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 5%;
+    }
 }
